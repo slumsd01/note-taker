@@ -33,7 +33,7 @@ app.route('/api/notes')
 
         database.push(newNote)
 
-        fs.writeFile(JSONfile, JSON.stringify(database), (err) => {
+        fs.writeFile(JSONfile, JSON.stringify(database, null, '\t'), (err) => {
             if (err) {
                 return console.log(err)
             }
